@@ -73,7 +73,7 @@ export default function AboutSection() {
             <span className="font-bold">INDIA ▼</span>
           </div>
 
-          <div className="mt-12 rounded-3xl overflow-hidden">
+          <div className="mt-12 h-125 rounded-3xl overflow-hidden">
             <Image
               src="/building.png"
               alt="building"

@@ -1,14 +1,15 @@
-'use client'
+"use client";
 import Image from "next/image";
 import AboutSection from "./components/AboutSection";
 import InspirationSection from "./components/InspirationSection";
 import HotTopicsSection from "./components/HotTopicsSection";
 import Navbar from "./components/Navbar";
+import { CustomButton } from "./components/CustomButton";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-100 flex flex-col items-center justify-center font-Poppins">
-      <Navbar/>
+      <Navbar />
       <svg width="0" height="0" className="absolute">
         <defs>
           <clipPath id="leftCurve" clipPathUnits="objectBoundingBox">
@@ -33,7 +34,7 @@ export default function Home() {
             ACCOUNTANTS AND GLOBAL BUSINESS ADVISORS
           </p>
 
-          <h1 className="text-5xl font-bold leading-tight mb-6">
+          <h1 className="text-5xl font-bold leading-tight mb-6 border-b-2 w-85">
             EMPOWERED <br /> WORKPLACES
           </h1>
 
@@ -43,13 +44,11 @@ export default function Home() {
             building a culture of shared success.
           </p>
 
-          <button className="bg-orange-500 hover:bg-orange-600 transition text-black font-semibold px-6 py-2 rounded-md w-fit flex items-center gap-2">
-            LETS CONNECT
-          </button>
+          <CustomButton text={"LETS CONNECT"} icon={true} />
 
           <p className="absolute bottom-6 text-xs opacity-70 max-w-xs">
-            ACCOUNTING, TAXATION, & BUSINESS ADVISORY BETWEEN INDIA, JAPAN,
-            AND THE WORLD
+            ACCOUNTING, TAXATION, & BUSINESS ADVISORY BETWEEN INDIA, JAPAN, AND
+            THE WORLD
           </p>
         </div>
       </div>
@@ -58,10 +57,10 @@ export default function Home() {
         .clip-left {
           clip-path: url(#leftCurve);
         }
-        `}</style>
-        <HotTopicsSection/>
-        <AboutSection/>
-        <InspirationSection/>
+      `}</style>
+      <HotTopicsSection />
+      <AboutSection />
+      <InspirationSection />
     </main>
   );
 }
